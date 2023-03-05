@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Recycling Waste</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style.css">
+        
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <title>Image Classification WebApp</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+    </head>
+		<!--<style>
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+
+		</style>
+
+
+    </head>
+
+    <body>
+	<div class="bg-img">
+	<div class="content">
+        <div class = "index-main">
+
+        <div style = "width : 100%; padding-top : 5%;">
+            <div class = "header-content">
+                 <h1 style = "text-align: center;color: white"><span class="header-content-text">Waste Classifying Model</span></h1>
+            </div>
+        </div>
+
+        <div class="upload-section">
+
+            <div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="file-form-input" type="file" , name = "file"/>
+                    <button class="btn btn-success btn-lg">Upload</button>
+                </form>
+            </div>
+
+            <div class="uploadOR">
+                <span>OR</span>
+            </div>
+
+            <div class="upload-link">
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL(not the site address)"/>
+                    <button class="btn btn-success btn-lg">Proceed</button>
+                </form>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>
+        </div>
+
+        <div class = "footer">
+
+            <div class = "header-content-sub">
+                    <p style = "text-align: center;color:orange" class="header-content-info">Battery, Cardboard, Cans, Paper, Shoes, Glass, Plastic</p>
+            </div>
+        </div>
+	     </div>
+	</div>
+	</div>
+    </body>-->
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="navbar">
+          <a href="./static/carGO/index.html"> <img src="./static/css/logo.png"></a>
+            <span class="navbar-items">
+                <a href="./static/carGO/connect.html">connect</a>
+                <a href="#recycle">Recycle</a>
+                <a href="https://superb-pastelito-816a25.netlify.app/" target="_blank">shop</a>
+                <a href="./static/carGO/footprint.html">Footprint</a>
+            </span>
+        </div>
+
+        <div class="recycle-landing">
+            <img src="./static/css/recycle-bg.png">
+            <div class="recycle-landing-title">Recycling Waste</div>
+            <h3>Try to reduce and reuse the waste items instead of putting them in the trash. This saves lots of energy and resources. Upload the image of the item. If the item recyclable, it is taken by the company for recycling</h3>
+        </div>
+        <div class="product-upload">
+            <h2>Product Details</h2>
+
+            <div class="upload-link">
+                <h3>Upload Via Link</h3>
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL(not the site address)"/>
+                    <button class="proceed-btn proceed-btn-text btn-success btn-lg">Proceed</button>
+                </form>
+            </div>
+            <div class="uploadOR">
+                <span>OR</span>
+            </div>
+            <div class="upload-file">
+                <h3>Upload Image</h3>
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="upload-input" type="file" , name = "file"/>
+                    <button class="upload-btn upload-btn-text btn-success btn-lg">Upload</button>
+                </form>
+            </div>
+        </div>
+        <div class="recycle-calculator">
+            <h2>Enter Details</h2>
+            <form  onsubmit="return calculator()">
+                <p>Name</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "name" placeholder=""/>
+                <p>Area</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "area" placeholder=""/>
+                <p>State</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "state" placeholder=""/>
+                <p>Country</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "country" placeholder=""/>
+                <p>Phone Number</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "phno" placeholder=""/>
+                <p>Weight</p>
+                <input class="link-form-input" type="text" ,maxlength="1000" , name = "Weight" placeholder=""/>
+                <button class="calc-btn">Submit</button>
+            </form>
+
+        </div>
+
+        <div id="out">
+
+        <div class="successful-req">
+                <img src="./static/css/yesicon.svg">
+                <span class="successful-text">Your request for recycling is accepted</span>
+            </div>
+        <div class="reciept-container">
+
+
+        <div class="reciept-card">
+            <img src="./static/css/paper.png">
+            <span>
+                <div>PAPER-3KG</div><br>
+                <div>RecycableWaste</div><br>
+                <div>SUVARNALAKSHMI</div><br>
+                <div><img src="./static/css/rupee.svg"> 50.64</div>
+            </span>
+
+        </div>
+        </div>
+
+        </div>
+
+            <!--<div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="" type="file" , name = "file"/>
+                    <button class="btn btn-success btn-lg">Upload</button>
+                </form>
+            </!--<div>
+
+          <->  <div class="uploadOR">
+                <span>OR</span>
+            </div>
+
+            <div class="upload-link">
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL(not the site address)"/>
+                    <button class="btn btn-success btn-lg">Proceed</button>
+                </form>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>-->
+
+
+        <script src="" async defer></script>
+
+    </body>
+</html>

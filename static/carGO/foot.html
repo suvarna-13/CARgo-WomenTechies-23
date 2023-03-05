@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link  rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    
+    <body>
+        <div class="landing-page">
+            <div class="topnav">
+
+                <a href="connect.html">Connect</a>
+                <a href="http://127.0.0.1:5000/">Recycle</a>
+                <a href="https://superb-pastelito-816a25.netlify.app/" target="_blank">Shop</a>
+                <a href="footprint.html">Footprint</a>
+            </div>
+            </div>
+        <div class="fp">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <br><br><br><br><br>
+            <div id="form">
+                <form>
+                    <h3 id="home-energy-label"><i class="fa fa-home" aria-hidden="true"></i> Home Energy</h3>	
+                    <div class="form-group">
+                        <label for="electric">Monthly electric bill</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">₹</div>
+                            <input class="form-control" id="electric" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gas">Monthly natural gas bill</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">₹</div>
+                            <input class="form-control" id="gas" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="oil">Monthly oil bil</label>
+                        <p><i>Somes homes use oil as a fuel source for heating furnances or boilers, and is often abbreviated as HHO.</i></p>
+                        <div class="input-group">
+                            <div class="input-group-addon">₹</div>
+                            <input class="form-control" id="oil" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <br/>
+                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel</h3>
+                    <div class="form-group">
+                        <label for="car">Annual miles driven on your car</label>
+                        <input class="form-control" id="car" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
+                        <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
+                        <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <br/>
+                    <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i> Waste</h3>
+                    <div class="form-group">
+                        <label>Do you recycle newspaper?</label>
+                        <div class="alert alert-danger" role="alert" id="newspaper-alert"><strong>Oops!</strong> You need to make a selection.</div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio1" value="option1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio2" value="option2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you recycle aluminum and tin?</label>
+                        <div class="alert alert-danger" role="alert" id="alum-tin-alert"><strong>Oops!</strong> You need to make a selection.</div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="alumtinOptionsRadios" id="optionsRadio3" value="option3">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="alumtinOptionsRadios" id="optionsRadio4" value="option4">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+                </form>
+            </div>
+        </div>  </div>
+        <br>
+        <!-- <div class="img1">
+            <img src="./images/image 2.png">
+
+        </div>
+        <div class="img2">
+            <img src="./images/image 3.png">
+
+        </div> -->
+        <div id="results" class="text-center">
+            <br><br>
+            <h1 id="score">0</h1>
+            <br/>
+            <p class="lead">This number represents the amount of greenhouse gases in units of carbon dioxide you emit per year</p>
+            <br/>
+            <h5 class="bg-success score-info" style="color:black">438,000 or below is EXCELLENT</h5>
+            <h5 class="bg-info score-info" style="color:black">438,000 to 1,167,927 is GOOD</h5>
+            <h5 class="bg-warning score-info" style="color:black">1,167,927 to 1,606,000 is AVERAGE</h5>
+            <h5 class="bg-danger score-info" style="color:black">1,606,000 or above is BAD</h5>
+            <br/>
+            <br/>
+            <br/><br>
+            <button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button><br><br>
+    
+    <table class="calcgraph" style="margin: auto;">
+    <tbody><tr class="calcgraph">
+    <td class="calcgraph"><img src="images/blackfoot2.gif" width="105" height="38" alt="Your footprint is 0.32 metric tons per year"></td>
+    <td class="calcgraph"><img src="images/blackfoot1.gif" width="105" height="208" alt="The average footprint for people in India is 1.73 metric tons"></td>
+    <td class="calcgraph"><img src="images/blackfoot.gif" width="105" height="240" alt="The worldwide target to combat climate change is 2 metric tons"></td>
+    </tr>
+    <tr class="calcgraph">
+    <th class="calcgraph">Your<br>Footprint</th><th class="calcgraph">Country<br>Average</th><th class="calcgraph">World<br>Target</th>
+    </tr>
+    </tbody>
+    </table><br><br>
+    <div class="resultspic"></div>
+    <table class="gentable resultsnotes"><tbody><tr><td>
+        <div class="btm">
+    <ul class="resultsbullets">
+    <li class="resultsbullets">The average footprint for people in India is 1.73 metric tons</li><li class="resultsbullets">The average for the European Union is about 6.4 metric tons</li><li class="resultsbullets">The average worldwide carbon footprint is about 5 metric tons</li><li class="resultsbullets">The worldwide target to combat climate change is 2 metric tons</li>
+    </ul>
+    </td></tr></tbody></table>
+    </div>	</div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        
+    </div>
+    
+  
+    </div>
+    </body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</html>

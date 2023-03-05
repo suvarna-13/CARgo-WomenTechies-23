@@ -1,0 +1,8 @@
+0 Nothing
+1 Battery
+2 Cardboard
+3 Cans
+4 Paper
+5 Shoes
+6 Glass
+7 Plastic

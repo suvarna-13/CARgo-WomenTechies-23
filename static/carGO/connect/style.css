@@ -1,0 +1,227 @@
+body{
+    background: #1E1E1E;
+}
+
+.navbar{
+    position: absolute;
+width: 955px;
+height: 82.87px;
+left: 73px;
+top: 10px;
+}
+.navbar img{
+    position: absolute;
+width: 149px;
+height: 82.87px;
+left: 73px;
+top: 47px;
+}
+
+
+.navbar-items {
+    
+    position: absolute;
+    width: 593px;
+   height: 40px;
+    left: 785px;
+    top: 58px;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar-items a {
+    float: right;
+    color: #D0EF29;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+
+    height: 39px;
+    top: 89px;
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+/* identical to box height */
+    
+  }
+
+  .connect-landing img{
+    position: absolute;
+width: 1272px;
+height: 660px;
+left: 133px;
+top: 232px;
+border-radius: 315px;
+background: url(./images/recycle-bg.png);
+  }
+
+.connect-landing-title{
+    position: absolute;
+width: 681px;
+height: 277px;
+left: 105px;
+top: 775px;
+
+font-family: 'Fredoka';
+font-style: normal;
+font-weight: 600;
+font-size: 120px;
+line-height: 120.5%;
+/* or 145px */
+
+letter-spacing: 0.02em;
+
+color: #D0EF29;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(2px);
+}
+
+.connect-landing h3{
+    position: absolute;
+width: 1182px;
+height: 123px;
+left: 179px;
+top: 936px;
+
+font-family: 'Fredoka';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 137%;
+/* or 41px */
+
+
+color: #FFFFFF;
+}
+
+.container{
+    position: absolute;
+width: 1440px;
+height: 1733px;
+left: 0px;
+top: 270px;
+
+position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+:root {
+  --primary-color: black;
+  --secondary-color:  #60D52F ;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.tabs {
+  display: flex;
+  position: relative;
+  background-color: #2A3C22;
+  
+  
+  color:beige;
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+.tabs * {
+  z-index: 2;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+
+  width: 454px;
+height: 43px;
+left: 251px;
+top: 0px;
+
+font-family: 'Fredoka';
+font-style: normal;
+font-weight: 500;
+font-size: 35.1724px;
+line-height: 43px;
+}
+
+
+input[type=radio]:checked + label {
+  color: var(--primary-color);
+}
+
+input[id=radio-1]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+input[id=radio-2]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+input[id=radio-3]:checked ~ .glider {
+  transform: translateX(200%);
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 64px;
+  width: 460px;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+  top:0px;
+  left:0px;
+}
+.tab-con{
+    font-size: 20px;
+    color:beige;
+    margin-top: 200px;
+
+}
+
+
+input { display: none; }
+input + label { display: inline-block }
+input ~ .contents { display: none }   
+
+#radio-1:checked ~ .tab-con.content1,
+#radio-2:checked ~ .tab-con.content2,
+#radio-3:checked ~ .tab-con.content3 { display: block; }
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
+}
+
+.contents{
+    position: absolute;
+    width: 1440px;
+    height: 1733px;
+    left: 0px;
+    top: 270px;
+}
+
